@@ -1,0 +1,33 @@
+Notes:
+
+- The object of this game is to reach level 100.  If you reach level 100 you win.  If you die to a monster, or quit, you lose.
+
+- The reason quit is 8 is to prevent accidentally pressing it, whether using the numpad or number keys. 
+
+- Game does not break on entering a non-numerical key.  The only thing I found that may break the game is a potential overflow of health to the negatives, but I changed some numbers, so that should be very hard to do now.
+
+- Speaking of numbers, this game is entirely unbalanced. It may or may not be winnable. Its supposed to be a roguelike, and I do not have the gaming skill, nor time, to be able to test it, but I think it is winnable. Without the cheat item. In fact, I think that it may be heavily skewed to the player with the right items, namely thief ring and bulk ring.
+
+- The dungeon is randomly generated. The number of rooms depends on your current level. 
+
+- You advance to the next floor whenever you enter the gold room. When you advance to a new floor, your health is restored, and you get exp.  Other than that, there are no benefits.
+
+- You also get exp when you kill a monster. The amount of exp depends on the monsters strength.
+
+- A monster's strength and exp are randomly generated and depend on your current level. 
+
+- The only monster I implemented was a SimpleEnemy, which does not have magic.
+
+- Damage is just the strength value.  No randomness there, for either player or enemies.
+
+- There is a 50% chance of a successful flee.
+
+- Enemies and items both pop up randomly when you enter a new room. If both pop up, enemy attacks first, then once you beat it you get the item.
+
+- Only two items are health pots and the various rings, and a cheat item with a very low chance of popping up.
+
+- Instead of MP and such, magic in this game is done with rings.  There are six different rings, which you can randomly find in the dungeon. Each ring has a different spell associated with it, which you can equip. Each ring can be used 100 times, then it breaks. I didn't notice that MP was supposed to be required, but I think the mechanics of the rings are equivalent, and much cooler.
+
+- Poisoned never ended up being used, but its still in there.
+
+- Constants.java is not found in the UML diagrams.  I feel that its purpose is self-explanatory, and I don't feel like copying what is basically the whole file into a table.
